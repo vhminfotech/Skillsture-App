@@ -1,2 +1,2 @@
 # Skillsture-App
-Flutter Base Project
+Skillture app
