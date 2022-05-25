@@ -38,9 +38,9 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) => SafeArea(
         child: Scaffold(
-          appBar: AppBar(
+          /*appBar: AppBar(
             title: Text(apiBaseUrl),
-          ),
+          ),*/
           body: Form(
             key: _key,
             autovalidateMode: AutovalidateMode.always,

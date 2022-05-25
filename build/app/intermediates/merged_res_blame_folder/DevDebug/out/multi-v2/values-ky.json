@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/build/app/intermediates/incremental/mergeDevDebugResources/merged.dir/values-ky/values-ky.xml",
+            "outputFile": "/Users/mac/Documents/flutter-base/Skillsture-App/build/app/intermediates/incremental/mergeDevDebugResources/merged.dir/values-ky/values-ky.xml",
             "map": [
                 {
                     "source": "/Users/mac/.gradle/caches/transforms-3/846e5094a0f0114af067375a609d094e/transformed/core-1.6.0/res/values-ky/values-ky.xml",

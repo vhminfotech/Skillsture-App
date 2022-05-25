@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../utils/localization/localization.dart';
 import '../../../utils/utils.dart';
 import '../../../widgets/app_logo.dart';
@@ -36,10 +37,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
+        /*appBar: AppBar(
           title: Text(Localization.of(context).signInTitle),
 //          backgroundColor: Colors.white,
-        ),
+        ),*/
         body: Form(
           key: _key,
           autovalidateMode: AutovalidateMode.always,
@@ -103,7 +104,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
         focusNode: _mobileFocus,
         decoration: Utils.styleInputDecoration(Localization.of(context).mobile),
         maxLength: 10,
-
         validator: (value) {
           return Utils.isEmpty(
             context,
