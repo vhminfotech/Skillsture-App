@@ -1,0 +1,63 @@
+name: BaseProject
+description: BaseProject Project
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.6.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  google_fonts: ^1.1.2
+  intl: 0.16.0
+  provider: 4.0.1
+  connectivity: ^0.4.3+2
+  dio: 3.0.8
+  shared_preferences:
+  pedantic: ^1.8.0
+  permission_handler: ^4.3.0
+#  app_settings: ^4.1.15
+  fluttertoast: ^7.0.2
+  libphonenumber: ^1.0.1
+  date_format: ^1.0.8
+
+
+dev_dependencies:
+  effective_dart: ^1.2.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/splash_logo.png
+    - assets/images/splash_bg.png
+    - assets/fonts/
+
+  fonts:
+    - family: SFMonoMedium
+      fonts:
+        - asset: assets/fonts/SFMonoMedium.otf
+    - family: CovesBold
+      fonts:
+        - asset: assets/fonts/CovesBold700.otf
+    - family: CovesLight
+      fonts:
+        - asset: assets/fonts/CovesLight300.otf
+    - family: CovesExtraLight
+      fonts:
+        - asset: assets/fonts/CovesLight.otf
+    - family: PoppinsLight
+      fonts:
+        - asset: assets/fonts/PoppinsLight.ttf
+    - family: PoppinsMedium
+      fonts:
+        - asset: assets/fonts/PoppinsMedium.ttf
+    - family: PoppinsRegular
+      fonts:
+        - asset: assets/fonts/PoppinsRegular.ttf
+    - family: RobotoLight
+      fonts:
+        - asset: assets/fonts/RobotoLight.ttf
