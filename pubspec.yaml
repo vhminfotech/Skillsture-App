@@ -35,6 +35,9 @@ flutter:
     - assets/images/splash_logo.png
     - assets/images/splash_bg.png
     - assets/images/ic_visual.png
+    - assets/images/ic_visual_1.png
+    - assets/images/ic_visual_2x.png
+    - assets/images/auth_logo.png
     - assets/fonts/
 
   fonts:

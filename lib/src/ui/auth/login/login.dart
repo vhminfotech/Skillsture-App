@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../apis/api_manager.dart';
 import '../../../apis/error_model.dart';
-import '../../../utils/app_config.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/dialog_utils.dart';
 import '../../../utils/localization/localization.dart';
@@ -160,7 +159,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 });
               },
             ),
-            border: const OutlineInputBorder(),
+            // border: const OutlineInputBorder(),
           ),
           onSaved: (_) {
             _password = _;
@@ -175,8 +174,7 @@ class _LoginScreenState extends State<LoginScreen> {
   void _loginPressed() {
     if (_key.currentState.validate()) {
       _key.currentState.save();
-      DialogUtils.showAlertDialog(
-          context,  'Are you sure you want to Accept?');
+      DialogUtils.showAlertDialog(context, 'Are you sure you want to Accept?');
     }
 //    _authProvider.login("vparking", "Ms@12345");
     ProgressDialogUtils.showProgressDialog(context);

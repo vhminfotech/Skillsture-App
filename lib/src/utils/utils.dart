@@ -1,7 +1,6 @@
 import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 import 'package:libphonenumber/libphonenumber.dart';
 
@@ -26,7 +25,7 @@ class Utils {
       labelText: label,
       labelStyle: styleTextStyleTextField(),
       counterText: "",
-      border: const OutlineInputBorder(),
+      //  border: const OutlineInputBorder(),
     );
   }
 
@@ -112,10 +111,6 @@ class Utils {
   //     return null;
   //   }
   // }
-
-
-
-
 
   static String isMobileNumberValid(BuildContext context, String value) {
     const pattern = r'(^(?:[+0]9)?[0-9]{10,12}$)';
