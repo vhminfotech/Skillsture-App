@@ -25,14 +25,18 @@ class Utils {
       labelText: label,
       labelStyle: styleTextStyleTextField(),
       counterText: "",
+      focusedBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: Color(0xFFFFB451), width: 2),
+      ),
       //  border: const OutlineInputBorder(),
     );
   }
 
   static TextStyle styleTextStyleTextField() {
     return const TextStyle(
-      fontSize: 20,
-    );
+        fontSize: 12,
+        color: Color(0xFF262261),
+        fontFamily: "Comfortaa-Regular");
   }
 
   static String isValidEmail(BuildContext context, String value) {
@@ -40,7 +44,10 @@ class Utils {
       return Localization.of(context).msgEnterAddress;
     } else if (Utils.isEmailValid(value)) {
       return Localization.of(context).msgEnterValidAddress;
-    } else {
+    } /* else if (!Utils.isEmailValid(value)) {
+      return "Valid email address.";
+    }*/
+    else {
       return null;
     }
   }
@@ -230,25 +237,25 @@ class Utils {
     return formatDate(todayDate, [dd, ' ', M, ' ', yyyy]);
   }
 
-  // String getUtcDate() {
-  //   initializeDateFormatting();
-  //   final dateUtc = DateTime.now().toUtc();
-  //   final date = DateFormat(dateFormatServerDate).format(dateUtc);
-  //   return date;
-  // }
+// String getUtcDate() {
+//   initializeDateFormatting();
+//   final dateUtc = DateTime.now().toUtc();
+//   final date = DateFormat(dateFormatServerDate).format(dateUtc);
+//   return date;
+// }
 
-  // static String convertStringWithTimeDifference(
-  //     String strDate, BuildContext context) {
-  //   initializeDateFormatting();
-  //   final givenDate = DateFormat(dateFormatChatDate).parse(strDate, false);
-  //   final nowDate = DateTime.now().toUtc();
-  //   final difference = nowDate.difference(givenDate);
-  //   if (difference.inDays < 1) {
-  //     return "${Localization.of(context).labelToday}";
-  //   } else if (difference.inDays == 1) {
-  //     return "${Localization.of(context).labelYesterday}";
-  //   } else {
-  //     return formatDate(givenDate, [dd, ' ', MM, ' ', yyyy]);
-  //   }
-  // }
+// static String convertStringWithTimeDifference(
+//     String strDate, BuildContext context) {
+//   initializeDateFormatting();
+//   final givenDate = DateFormat(dateFormatChatDate).parse(strDate, false);
+//   final nowDate = DateTime.now().toUtc();
+//   final difference = nowDate.difference(givenDate);
+//   if (difference.inDays < 1) {
+//     return "${Localization.of(context).labelToday}";
+//   } else if (difference.inDays == 1) {
+//     return "${Localization.of(context).labelYesterday}";
+//   } else {
+//     return formatDate(givenDate, [dd, ' ', MM, ' ', yyyy]);
+//   }
+// }
 }

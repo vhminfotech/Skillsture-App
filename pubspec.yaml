@@ -18,16 +18,22 @@ dependencies:
   shared_preferences:
   pedantic: ^1.8.0
   permission_handler: ^4.3.0
-#  app_settings: ^4.1.15
+  #  app_settings: ^4.1.15
   fluttertoast: ^7.0.2
   libphonenumber: ^1.0.1
   date_format: ^1.0.8
+  flutter_launcher_icons: ^0.9.2
 
 
 dev_dependencies:
   effective_dart: ^1.2.0
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/splash_logo.png"
 
 flutter:
   uses-material-design: true
@@ -38,6 +44,12 @@ flutter:
     - assets/images/ic_visual_1.png
     - assets/images/ic_visual_2x.png
     - assets/images/auth_logo.png
+    - assets/images/ic_facebook.png
+    - assets/images/ic_google.png
+    - assets/images/ic_cancel.png
+    - assets/images/ic_check.png
+    - assets/images/ic_mail.png
+    - assets/images/header.jpg
     - assets/fonts/
 
   fonts:
@@ -65,3 +77,18 @@ flutter:
     - family: RobotoLight
       fonts:
         - asset: assets/fonts/RobotoLight.ttf
+    - family: Comfortaa-Regular
+      fonts:
+          - asset: assets/fonts/Comfortaa-Regular.ttf
+    - family: Comfortaa-Medium
+      fonts:
+          - asset: assets/fonts/Comfortaa-Medium.ttf
+    - family: Comfortaa-SemiBold
+      fonts:
+          - asset: assets/fonts/Comfortaa-SemiBold.ttf
+    - family: Comfortaa-Bold
+      fonts:
+          - asset: assets/fonts/Comfortaa-Bold.ttf
+    - family: Cocogoose-Regular
+      fonts:
+          - asset: assets/fonts/Cocogoose-Regular.ttf

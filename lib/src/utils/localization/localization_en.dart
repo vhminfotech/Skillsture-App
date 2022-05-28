@@ -1,4 +1,3 @@
-
 import 'localization.dart';
 
 class LocalizationEN implements Localization {
@@ -12,7 +11,7 @@ class LocalizationEN implements Localization {
   String get email => "Email";
 
   @override
-  String get forgotPassword => "Forgot your password?";
+  String get forgotPassword => "Forgot password?";
 
   @override
   String get password => "Password";
@@ -21,10 +20,10 @@ class LocalizationEN implements Localization {
   String get msgEnterAddress => "Please enter a email address";
 
   @override
-  String get msgEnterValidAddress => "Please enter a valid email address";
+  String get msgEnterValidAddress => "Invalid! Enter a valid email address.";
 
   @override
-  String get signIn => "Don't have account? Sign in";
+  String get signIn => "Don't have an account? ";
 
   @override
   String get signInTitle => "Sign In";
@@ -45,7 +44,8 @@ class LocalizationEN implements Localization {
   String get msgEnterMobile => "Please enter a mobile";
 
   @override
-  String get alertPermissionNotRestricted => "Please grant permission from settings for access feature";
+  String get alertPermissionNotRestricted =>
+      "Please grant permission from settings for access feature";
 
   @override
   String get appName => "Base Project";

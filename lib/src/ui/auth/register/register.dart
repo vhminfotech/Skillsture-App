@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../utils/localization/localization.dart';
 import '../../../utils/utils.dart';
-import '../../../widgets/app_logo.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override
@@ -48,7 +47,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
-                  AppLogo(),
+                  _getHeaderImage(),
                   _getNameTextField(),
                   _getEmailTextField(),
                   _getMobileTextField(),
@@ -63,6 +62,27 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
     );
   }
+
+  Widget _getHeaderImage() => Stack(children: <Widget>[
+        Image.asset(
+          'assets/images/header.jpg',
+          width: double.infinity,
+          height: (MediaQuery.of(context).size.height) / 4,
+          fit: BoxFit.cover,
+        ),
+        Container(
+          margin: const EdgeInsets.only(left: 20),
+          height: (MediaQuery.of(context).size.height) / 5,
+          child: Align(
+            alignment: Alignment.bottomLeft,
+            child: Text("Get Started",
+                style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                    fontFamily: "Cocogoose-Regular")),
+          ),
+        )
+      ]);
 
   Widget _getAppLogo() {
     return Center(

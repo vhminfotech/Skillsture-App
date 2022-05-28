@@ -26,8 +26,8 @@
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 20-->[androidx.core:core:1.6.0] /Users/mac/.gradle/caches/transforms-3/846e5094a0f0114af067375a609d094e/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 21        android:debuggable="true"
-22        android:icon="@mipmap/ic_launcher"
-23        android:label="Flutter API Sample" >
+22        android:icon="@mipmap/launcher_icon"
+23        android:label="Skillsture" >
 24        <activity
 25            android:name="com.flutter.baseproject.MainActivity"
 26            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

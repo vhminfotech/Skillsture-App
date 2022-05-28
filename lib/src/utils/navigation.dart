@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+import '../ui/auth/checkyourmail/check_your_mail.dart';
+import '../ui/auth/forgotpassword/forgot_password.dart';
 import '../ui/auth/login/login.dart';
 import '../ui/auth/register/register.dart';
 import '../ui/auth/splash.dart';
@@ -14,6 +17,10 @@ class NavigationUtils {
         return MaterialPageRoute(builder: (_) => LoginScreen());
       case routeLaunch:
         return MaterialPageRoute(builder: (_) => SplashScreen());
+      case routeForgotPassword:
+        return MaterialPageRoute(builder: (_) => ForgotPasswordScreen());
+      case routeCheckYourMail:
+        return MaterialPageRoute(builder: (_) => CheckYourMailScreen());
       default:
         return _errorRoute(" Comming soon...");
     }

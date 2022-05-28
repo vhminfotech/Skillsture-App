@@ -4,11 +4,13 @@ class AppLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      height: 170,
-      color: Color(0xFF262261),
-      alignment: Alignment.topCenter,
-      child: Column(
+        alignment: Alignment.topCenter,
+        child: Image.asset(
+          'assets/images/header.jpg',
+          width: double.infinity,
+          height: 200,
+          fit: BoxFit.cover,
+        ) /*Column(
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -45,7 +47,7 @@ class AppLogo extends StatelessWidget {
             ],
           ),
         ],
-      ),
-    );
+      ),*/
+        );
   }
 }

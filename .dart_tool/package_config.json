@@ -2,6 +2,18 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "archive",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/archive-3.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "args",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/args-2.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/async-2.8.2",
       "packageUri": "lib/",
@@ -116,6 +128,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_launcher_icons",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/flutter_launcher_icons-0.9.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -150,6 +168,12 @@
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/http_parser-3.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.3"
+    },
+    {
+      "name": "image",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/image-3.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
     },
     {
       "name": "intl",
@@ -258,6 +282,12 @@
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/permission_handler_platform_interface-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "petitparser",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/petitparser-5.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "platform",
@@ -398,13 +428,25 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "xml",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/xml-6.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "yaml",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/yaml-3.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "BaseProject",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.6"
     }
   ],
-  "generated": "2022-05-26T12:50:44.553627Z",
+  "generated": "2022-05-28T10:57:49.618491Z",
   "generator": "pub",
   "generatorVersion": "2.17.1"
 }

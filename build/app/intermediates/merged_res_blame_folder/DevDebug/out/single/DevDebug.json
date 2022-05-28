@@ -1,7 +1,27 @@
 [
     {
+        "merged": "/Users/mac/Documents/flutter-base/Skillsture-App/build/app/intermediates/merged_res/DevDebug/mipmap-xxhdpi_launcher_icon.png.flat",
+        "source": "/Users/mac/Documents/flutter-base/Skillsture-App/android/app/src/main/res/mipmap-xxhdpi/launcher_icon.png"
+    },
+    {
+        "merged": "/Users/mac/Documents/flutter-base/Skillsture-App/build/app/intermediates/merged_res/DevDebug/mipmap-xhdpi_launcher_icon.png.flat",
+        "source": "/Users/mac/Documents/flutter-base/Skillsture-App/android/app/src/main/res/mipmap-xhdpi/launcher_icon.png"
+    },
+    {
+        "merged": "/Users/mac/Documents/flutter-base/Skillsture-App/build/app/intermediates/merged_res/DevDebug/mipmap-mdpi_launcher_icon.png.flat",
+        "source": "/Users/mac/Documents/flutter-base/Skillsture-App/android/app/src/main/res/mipmap-mdpi/launcher_icon.png"
+    },
+    {
         "merged": "/Users/mac/Documents/flutter-base/Skillsture-App/build/app/intermediates/merged_res/DevDebug/mipmap-hdpi_ic_launcher.png.flat",
         "source": "/Users/mac/Documents/flutter-base/Skillsture-App/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/mac/Documents/flutter-base/Skillsture-App/build/app/intermediates/merged_res/DevDebug/mipmap-xxxhdpi_launcher_icon.png.flat",
+        "source": "/Users/mac/Documents/flutter-base/Skillsture-App/android/app/src/main/res/mipmap-xxxhdpi/launcher_icon.png"
+    },
+    {
+        "merged": "/Users/mac/Documents/flutter-base/Skillsture-App/build/app/intermediates/merged_res/DevDebug/mipmap-hdpi_launcher_icon.png.flat",
+        "source": "/Users/mac/Documents/flutter-base/Skillsture-App/android/app/src/main/res/mipmap-hdpi/launcher_icon.png"
     },
     {
         "merged": "/Users/mac/Documents/flutter-base/Skillsture-App/build/app/intermediates/merged_res/DevDebug/mipmap-xhdpi_ic_launcher.png.flat",

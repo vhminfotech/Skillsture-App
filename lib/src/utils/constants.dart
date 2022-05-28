@@ -1,9 +1,11 @@
 const String routeLaunch = "routeLaunch";
 const String routeLogin = "routeLogin";
 const String routeRegister = "routeRegister";
+const String routeForgotPassword = "routeForgotPassword";
+const String routeResetPassword = "routeResetPassword";
+const String routeCheckYourMail = "routeCheckYourMail";
 
 const String apiToken = "apiToken";
-
 
 const int splashTime = 5;
 const String countryCodeNG = "US";
