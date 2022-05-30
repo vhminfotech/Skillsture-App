@@ -35,10 +35,10 @@ class LocalizationEN implements Localization {
   String get name => "Name";
 
   @override
-  String get confirmPassword => "Confirm Password";
+  String get confirmPassword => "Confirmed Password";
 
   @override
-  String get mobile => "Mobile";
+  String get mobile => "Mobile Number";
 
   @override
   String get msgEnterMobile => "Please enter a mobile";

@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../apis/api_manager.dart';
-import '../../../apis/error_model.dart';
 import '../../../utils/constants.dart';
-import '../../../utils/dialog_utils.dart';
 import '../../../utils/localization/localization.dart';
 import '../../../utils/navigation.dart';
-import '../../../utils/progress_dialog.dart';
 import '../../../utils/utils.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -307,7 +303,9 @@ class _LoginScreenState extends State<LoginScreen> {
       );
 
   void _loginPressed() {
-    if (_key.currentState.validate()) {
+    NavigationUtils.push(context, routeHomePage);
+
+    /*if (_key.currentState.validate()) {
       _key.currentState.save();
       DialogUtils.showAlertDialog(context, 'Are you sure you want to Accept?');
     }
@@ -321,7 +319,7 @@ class _LoginScreenState extends State<LoginScreen> {
         debugPrint(e.error);
       }
       ProgressDialogUtils.dismissProgressDialog();
-    });
+    });*/
   }
 
   void _registerPressed() {

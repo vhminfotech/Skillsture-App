@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../utils/constants.dart';
 import '../../../utils/localization/localization.dart';
+import '../../../utils/navigation.dart';
 import '../../../utils/utils.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -53,7 +55,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   _getMobileTextField(),
                   _getPasswordTextField(),
                   _getConfirmPasswordTextField(),
-                  _getSignInButton(),
+                  _getTermsAndCondition(),
+                  _getSignUpButton(),
+                  _txtSignedInOption(),
+                  _getSocialButton(),
+                  _getLogin()
                 ],
               ),
             ),
@@ -101,6 +107,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
       padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
       margin: const EdgeInsets.only(top: 12),
       child: TextFormField(
+        style: TextStyle(
+            fontSize: 15.0,
+            color: Color(0xFF262261),
+            fontFamily: "Comfortaa-Medium"),
         textInputAction: TextInputAction.next,
         focusNode: _emailFocus,
         decoration: Utils.styleInputDecoration(Localization.of(context).email),
@@ -120,6 +130,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
       padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
       margin: const EdgeInsets.only(top: 12),
       child: TextFormField(
+        style: TextStyle(
+            fontSize: 15.0,
+            color: Color(0xFF262261),
+            fontFamily: "Comfortaa-Medium"),
         textInputAction: TextInputAction.next,
         focusNode: _mobileFocus,
         decoration: Utils.styleInputDecoration(Localization.of(context).mobile),
@@ -143,6 +157,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Container(
       padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
       child: TextFormField(
+        style: TextStyle(
+            fontSize: 15.0,
+            color: Color(0xFF262261),
+            fontFamily: "Comfortaa-Medium"),
         textInputAction: TextInputAction.next,
         focusNode: _nameFocus,
         decoration: Utils.styleInputDecoration(Localization.of(context).name),
@@ -161,25 +179,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  Widget _getSignInButton() {
+  Widget _getSignUpButton() {
     return Container(
-      width: 200,
+      width: double.infinity,
       height: 50,
-      margin: EdgeInsets.all(20),
+      margin: const EdgeInsets.all(20),
       child: RaisedButton(
-        color: Colors.indigo,
+        color: Color(0xFFF05A28),
         textColor: Colors.white,
         elevation: 1.0,
-        child: Text(
-          Localization.of(context).signInTitle,
-          style: TextStyle(
-            fontSize: 15.0,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
         onPressed: _registerPressed,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(25.0),
+          borderRadius: BorderRadius.circular(7.5),
+        ),
+        child: Text(
+          "Sign Up",
+          style: TextStyle(fontSize: 15.0, fontFamily: "Comfortaa-Bold"),
         ),
       ),
     );
@@ -191,6 +206,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
       child: TextFormField(
         textInputAction: TextInputAction.next,
         focusNode: _passwordFocus,
+        style: TextStyle(
+            fontSize: 15.0,
+            color: Color(0xFF262261),
+            fontFamily: "Comfortaa-Medium"),
         decoration: InputDecoration(
           labelText: Localization.of(context).password,
           labelStyle: Utils.styleTextStyleTextField(),
@@ -205,7 +224,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
               });
             },
           ),
-          border: OutlineInputBorder(),
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFFFFB451), width: 2),
+          ),
         ),
         onSaved: (value) {
           _password = value;
@@ -219,6 +240,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Container(
       padding: const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 10),
       child: TextFormField(
+        style: TextStyle(
+            fontSize: 15.0,
+            color: Color(0xFF262261),
+            fontFamily: "Comfortaa-Medium"),
         textInputAction: TextInputAction.done,
         focusNode: _confirmPasswordFocus,
         decoration: InputDecoration(
@@ -235,7 +260,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
               });
             },
           ),
-          border: OutlineInputBorder(),
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFFFFB451), width: 2),
+          ),
         ),
         onSaved: (value) {
           _confirmPassword = value;
@@ -244,6 +271,201 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
     );
   }
+
+  bool agree = false;
+
+  Widget _getTermsAndCondition() {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.only(left: 10, right: 10, top: 5, bottom: 5),
+      child: Column(
+        children: [
+          Row(children: [
+            Container(
+              padding:
+                  const EdgeInsets.only(left: 10, right: 10, top: 5, bottom: 5),
+              child: InkWell(
+                onTap: () {
+                  setState(() {
+                    agree = !agree;
+                  });
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Color(0xB3262261), width: 1),
+                    borderRadius: BorderRadius.circular(3),
+                  ),
+                  child: agree
+                      ? Icon(Icons.check, size: 17.0, color: Color(0xB3262261))
+                      : Icon(
+                          null,
+                          size: 17.0,
+                        ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: RichText(
+                text: TextSpan(
+                  // Note: Styles for TextSpans must be explicitly defined.
+                  // Child text spans will inherit styles from parent
+                  children: <TextSpan>[
+                    TextSpan(
+                      text:
+                          "By signing up you have read and agree to the Skillsture ",
+                      style: TextStyle(
+                          color: Color(0xB3262261),
+                          fontSize: 14.0,
+                          fontFamily: "Comfortaa-Medium"),
+                    ),
+                    TextSpan(
+                      text: "Term & Conditions",
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          color: Color(0xFFF05A28),
+                          fontSize: 14.0,
+                          fontFamily: "Comfortaa-Medium"),
+                    )
+                  ],
+                ),
+              ),
+            )
+          ]),
+        ],
+      ),
+    );
+  }
+
+  Widget _getSocialButton() => Container(
+      padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              height: 50,
+              child: RaisedButton(
+                color: Colors.white,
+                textColor: Colors.white,
+                elevation: 1.0,
+                onPressed: _loginPressed,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(7.5),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Image.asset(
+                      'assets/images/ic_google.png',
+                      width: 18.0,
+                      height: 18.0,
+                    ),
+                    Text(
+                      "Google",
+                      style: TextStyle(
+                          fontSize: 15.0,
+                          fontFamily: "Comfortaa-Bold",
+                          color: Color(0xFF262261)),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Text("    "),
+          Expanded(
+            child: Container(
+              height: 50,
+              child: RaisedButton(
+                color: Colors.white,
+                textColor: Colors.white,
+                elevation: 1.0,
+                onPressed: _loginPressed,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(7.5),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Image.asset(
+                      'assets/images/ic_facebook.png',
+                      width: 18.0,
+                      height: 18.0,
+                    ),
+                    Text(
+                      "Facebook",
+                      style: TextStyle(
+                          fontSize: 15.0,
+                          fontFamily: "Comfortaa-Bold",
+                          color: Color(0xFF262261)),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ));
+
+  Widget _getLogin() => Container(
+        margin: const EdgeInsets.all(10),
+        child: FlatButton(
+          padding: const EdgeInsets.all(10),
+          onPressed: _loginPressed,
+          child: RichText(
+            text: TextSpan(
+              // Note: Styles for TextSpans must be explicitly defined.
+              // Child text spans will inherit styles from parent
+              children: <TextSpan>[
+                TextSpan(
+                  text: "Already have an account? ",
+                  style: TextStyle(
+                      color: Color(0xFF262261),
+                      fontSize: 14.0,
+                      fontFamily: "Comfortaa-Medium"),
+                ),
+                TextSpan(
+                  text: "Login",
+                  style: TextStyle(
+                      color: Color(0xFFF05A28),
+                      fontSize: 14.0,
+                      fontFamily: "Comfortaa-Medium"),
+                )
+              ],
+            ),
+          ),
+        ),
+        /* child: Text(Localization.of(context).signIn,
+              style: TextStyle(
+                  color: Color(0xFF262261),
+                  fontSize: 14.0,
+                  fontFamily: "Comfortaa-Medium")),
+        ),*/
+      );
+
+  Widget _txtSignedInOption() => Row(children: <Widget>[
+        Expanded(
+          child: Container(
+              margin: const EdgeInsets.only(left: 25.0, right: 20.0),
+              child: Divider(
+                color: Color(0xB3262261),
+                height: 36,
+              )),
+        ),
+        Text("Or sign in with",
+            style: TextStyle(
+                color: Color(0xB3262261),
+                fontSize: 14.0,
+                fontFamily: "Comfortaa-Regular")),
+        Expanded(
+          child: Container(
+              margin: const EdgeInsets.only(left: 20.0, right: 25.0),
+              child: Divider(
+                color: Color(0xB3262261),
+                height: 36,
+              )),
+        ),
+      ]);
 
   void _registerPressed() {
     if (_key.currentState.validate()) {
@@ -255,5 +477,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
       print(_mobile);
       print(_confirmPassword);
     }
+  }
+
+  void _loginPressed() {
+    NavigationUtils.push(context, routeLogin);
   }
 }

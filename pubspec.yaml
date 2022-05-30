@@ -23,6 +23,7 @@ dependencies:
   libphonenumber: ^1.0.1
   date_format: ^1.0.8
   flutter_launcher_icons: ^0.9.2
+  titled_navigation_bar: ^4.1.0
 
 
 dev_dependencies:
@@ -50,6 +51,10 @@ flutter:
     - assets/images/ic_check.png
     - assets/images/ic_mail.png
     - assets/images/header.jpg
+    - assets/images/book_unselected.png
+    - assets/images/explore_unselected.png
+    - assets/images/more_unselected.png
+    - assets/images/search_unselected.png
     - assets/fonts/
 
   fonts:

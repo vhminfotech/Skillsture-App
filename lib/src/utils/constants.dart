@@ -4,6 +4,7 @@ const String routeRegister = "routeRegister";
 const String routeForgotPassword = "routeForgotPassword";
 const String routeResetPassword = "routeResetPassword";
 const String routeCheckYourMail = "routeCheckYourMail";
+const String routeHomePage = "routeHomePage";
 
 const String apiToken = "apiToken";
 
