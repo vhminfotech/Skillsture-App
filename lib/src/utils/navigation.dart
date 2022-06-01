@@ -5,6 +5,7 @@ import '../ui/auth/forgotpassword/forgot_password.dart';
 import '../ui/auth/login/login.dart';
 import '../ui/auth/register/register.dart';
 import '../ui/auth/splash.dart';
+import '../ui/home/explore/explore_screen.dart';
 import '../ui/home/homepage/home_screen.dart';
 import 'constants.dart';
 
@@ -24,6 +25,8 @@ class NavigationUtils {
         return MaterialPageRoute(builder: (_) => CheckYourMailScreen());
       case routeHomePage:
         return MaterialPageRoute(builder: (_) => HomeScreen());
+      case routeExplorePage:
+        return MaterialPageRoute(builder: (_) => ExploreScreen());
       default:
         return _errorRoute(" Comming soon...");
     }

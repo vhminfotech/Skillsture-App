@@ -264,13 +264,6 @@
             </list>
           </value>
         </entry>
-        <entry key="flutter">
-          <value>
-            <list>
-              <option value="$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="flutter_goldens">
           <value>
             <list>
@@ -296,13 +289,6 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter_test/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="flutter_web_plugins">
-          <value>
-            <list>
-              <option value="$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter_web_plugins/lib" />
             </list>
           </value>
         </entry>
@@ -565,6 +551,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/permission_handler_platform_interface-1.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="persistent_bottom_nav_bar">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/persistent_bottom_nav_bar-4.0.2/lib" />
             </list>
           </value>
         </entry>
@@ -999,6 +992,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/permission_handler-4.4.0+hotfix.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/permission_handler_platform_interface-1.0.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/persistent_bottom_nav_bar-4.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/petitparser-5.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/platform-3.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-1.0.3/lib" />
@@ -1051,10 +1045,8 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/yaml-3.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/yaml-3.1.1/lib" />
       <root url="file://$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/bin/cache/pkg/sky_engine/lib" />
-      <root url="file://$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter/lib" />
       <root url="file://$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter_goldens/lib" />
       <root url="file://$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter_test/lib" />
-      <root url="file://$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter_web_plugins/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

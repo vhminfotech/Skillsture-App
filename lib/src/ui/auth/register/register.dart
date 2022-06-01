@@ -422,14 +422,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   style: TextStyle(
                       color: Color(0xFF262261),
                       fontSize: 14.0,
-                      fontFamily: "Comfortaa-Medium"),
+                      fontFamily: "Comfortaa-Medium.ttf"),
                 ),
                 TextSpan(
                   text: "Login",
                   style: TextStyle(
                       color: Color(0xFFF05A28),
                       fontSize: 14.0,
-                      fontFamily: "Comfortaa-Medium"),
+                      fontFamily: "Comfortaa-Medium.ttf"),
                 )
               ],
             ),

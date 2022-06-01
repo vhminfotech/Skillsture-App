@@ -123,7 +123,7 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/flutter/packages/flutter",
+      "rootUri": "file:///Users/mac/Documents/flutter-base/Skillsture-App/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -135,13 +135,13 @@
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/flutter/packages/flutter_test",
+      "rootUri": "file:///Users/mac/Documents/flutter-base/Skillsture-App/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "flutter_web_plugins",
-      "rootUri": "file:///Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/flutter/packages/flutter_web_plugins",
+      "rootUri": "file:///Users/mac/Documents/flutter-base/Skillsture-App/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -284,6 +284,12 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "persistent_bottom_nav_bar",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/persistent_bottom_nav_bar-4.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "petitparser",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/petitparser-5.0.0",
       "packageUri": "lib/",
@@ -363,7 +369,7 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///Users/mac/Documents/flutter-base/Skillsture-App/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -452,7 +458,7 @@
       "languageVersion": "2.6"
     }
   ],
-  "generated": "2022-05-30T11:53:10.181248Z",
+  "generated": "2022-05-31T10:18:12.304651Z",
   "generator": "pub",
   "generatorVersion": "2.17.1"
 }
