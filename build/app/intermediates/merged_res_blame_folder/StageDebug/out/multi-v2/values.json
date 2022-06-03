@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/build/app/intermediates/incremental/mergeStageDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/mac/Documents/flutter-base/Skillsture-App/build/app/intermediates/incremental/mergeStageDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/build/app/generated/res/resValues/Stage/debug/values/gradleResValues.xml",
+                    "source": "/Users/mac/Documents/flutter-base/Skillsture-App/build/app/generated/res/resValues/Stage/debug/values/gradleResValues.xml",
                     "from": {
                         "startLines": "6",
                         "startColumns": "4",
@@ -40,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/mac/Documents/flutter-base/Skillsture-App/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

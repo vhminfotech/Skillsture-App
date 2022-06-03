@@ -12,22 +12,22 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/android/app/src/main/AndroidManifest.xml:8:5-66
-14-->/Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/android/app/src/main/AndroidManifest.xml:8:22-64
+14-->/Users/mac/Documents/flutter-base/Skillsture-App/android/app/src/main/AndroidManifest.xml:8:5-66
+14-->/Users/mac/Documents/flutter-base/Skillsture-App/android/app/src/main/AndroidManifest.xml:8:22-64
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->[:connectivity] /Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/build/connectivity/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
-15-->[:connectivity] /Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/build/connectivity/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-76
+15-->[:connectivity] /Users/mac/Documents/flutter-base/Skillsture-App/build/connectivity/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+15-->[:connectivity] /Users/mac/Documents/flutter-base/Skillsture-App/build/connectivity/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-76
 16    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-16-->[:connectivity] /Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/build/connectivity/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-76
-16-->[:connectivity] /Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/build/connectivity/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-73
+16-->[:connectivity] /Users/mac/Documents/flutter-base/Skillsture-App/build/connectivity/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-76
+16-->[:connectivity] /Users/mac/Documents/flutter-base/Skillsture-App/build/connectivity/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-73
 17
 18    <application
 19        android:name="android.app.Application"
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 20-->[androidx.core:core:1.6.0] /Users/mac/.gradle/caches/transforms-3/846e5094a0f0114af067375a609d094e/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 21        android:debuggable="true"
-22        android:icon="@mipmap/ic_launcher"
-23        android:label="Flutter API Sample" >
+22        android:icon="@mipmap/launcher_icon"
+23        android:label="Skillsture" >
 24        <activity
 25            android:name="com.flutter.baseproject.MainActivity"
 26            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

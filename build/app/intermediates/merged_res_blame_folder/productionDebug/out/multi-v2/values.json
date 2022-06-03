@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/build/app/intermediates/incremental/mergeProductionDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/mac/Documents/flutter-base/Skillsture-App/build/app/intermediates/incremental/mergeProductionDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/mac/.gradle/caches/transforms-3/d8c764f4c91c94fe8ae90da45222cf00/transformed/jetified-window-1.0.0-beta04/res/values/values.xml",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mac/Documents/flutter-base/flutter_app_base_project_setup-master/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/mac/Documents/flutter-base/Skillsture-App/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

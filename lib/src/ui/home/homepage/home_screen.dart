@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
-import '../explore/explore_screen.dart';
-
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -163,12 +161,18 @@ class _HomeScreenState extends State<HomeScreen> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 12, fontFamily: "Comfortaa-Bold.ttf");
   static final List<Widget> _widgetOptions = <Widget>[
-    ExploreScreen(),
     Text(
-      'Index 1: inal Business',
+      'Index 0: Explore',
       style: optionStyle,
     ),
-    ExploreScreen(),
+    Text(
+      'Index 1: Search',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: My Learning',
+      style: optionStyle,
+    ),
     Text(
       'Index 3: More',
       style: optionStyle,
