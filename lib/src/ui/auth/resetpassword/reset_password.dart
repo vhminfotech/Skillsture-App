@@ -48,7 +48,7 @@ class _ResetPasswordState extends State<ResetPasswordScreen> {
             alignment: Alignment.bottomLeft,
             child: Text("Check Your \nEmail",
                 style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 25.0,
                     color: Colors.white,
                     fontFamily: "Cocogoose-Regular")),
           ),

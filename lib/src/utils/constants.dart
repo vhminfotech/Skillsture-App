@@ -9,7 +9,7 @@ const String routeExplorePage = "routeExplorePage";
 
 const String apiToken = "apiToken";
 
-const int splashTime = 5;
+const int splashTime = 2;
 const String countryCodeNG = "US";
 const String countryCurrency = "\$";
 const String countryCode = "(+1)";

@@ -48,7 +48,7 @@ class _CheckYourMailState extends State<CheckYourMailScreen> {
             alignment: Alignment.bottomLeft,
             child: Text("Check Your \nEmail",
                 style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 25.0,
                     color: Colors.white,
                     fontFamily: "Cocogoose-Regular")),
           ),
@@ -85,7 +85,7 @@ class _CheckYourMailState extends State<CheckYourMailScreen> {
                 style: TextStyle(
                     color: Color(0xFF262261),
                     fontSize: 14.0,
-                    fontFamily: "Comfortaa-Medium"),
+                    fontFamily: "Comfortaa-Regular"),
               ),
             ),
             Container(

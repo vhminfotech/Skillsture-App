@@ -34,7 +34,7 @@ class Utils {
 
   static TextStyle styleTextStyleTextField() {
     return const TextStyle(
-        fontSize: 12,
+        fontSize: 20,
         color: Color(0xFF262261),
         fontFamily: "Comfortaa-Regular");
   }
@@ -122,7 +122,7 @@ class Utils {
   static String isMobileNumberValid(BuildContext context, String value) {
     const pattern = r'(^(?:[+0]9)?[0-9]{10,12}$)';
     final regExp = RegExp(pattern);
-    if (value.length == 0 || value.isEmpty) {
+    if (value.isEmpty || value.isEmpty) {
       return Localization.of(context).msgEnterMobile;
     } else if (!regExp.hasMatch(value)) {
       return Localization.of(context).errorValidMobileNumber;

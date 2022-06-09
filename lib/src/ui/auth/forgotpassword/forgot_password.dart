@@ -55,7 +55,7 @@ class _ForgotPasswordState extends State<ForgotPasswordScreen> {
             alignment: Alignment.bottomLeft,
             child: Text("Forgot \nPassword",
                 style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 25.0,
                     color: Colors.white,
                     fontFamily: "Cocogoose-Regular")),
           ),
@@ -66,7 +66,7 @@ class _ForgotPasswordState extends State<ForgotPasswordScreen> {
         padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
         child: TextFormField(
           style: TextStyle(
-              fontSize: 15.0,
+              fontSize: 20.0,
               color: Color(0xFF262261),
               fontFamily: "Comfortaa-Medium"),
           textInputAction: TextInputAction.next,
@@ -95,7 +95,7 @@ class _ForgotPasswordState extends State<ForgotPasswordScreen> {
           ),
           child: Text(
             "Reset Password",
-            style: TextStyle(fontSize: 15.0, fontFamily: "Comfortaa-Bold"),
+            style: TextStyle(fontSize: 16.0, fontFamily: "Comfortaa-Bold"),
           ),
         ),
       );

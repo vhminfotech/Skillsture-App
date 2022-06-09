@@ -49,6 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   _txtSignedInOption(),
                   _getSocialButton(),
                   _getAccountRegister(),
+                  _getSignUpAsInstructor(),
 //                  _buildBody(context),
                 ],
               ),
@@ -71,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
             alignment: Alignment.bottomLeft,
             child: Text("Welcome",
                 style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 25.0,
                     color: Colors.white,
                     fontFamily: "Cocogoose-Regular")),
           ),
@@ -82,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
         child: TextFormField(
           style: TextStyle(
-              fontSize: 15.0,
+              fontSize: 20.0,
               color: Color(0xFF262261),
               fontFamily: "Comfortaa-Medium"),
           textInputAction: TextInputAction.next,
@@ -105,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Text(
               Localization.of(context).forgotPassword,
               style: TextStyle(
-                  fontSize: 14.0,
+                  fontSize: 16.0,
                   color: Color(0xB3262261),
                   fontFamily: "Comfortaa-Medium"),
             ),
@@ -140,7 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text(
                       "Google",
                       style: TextStyle(
-                          fontSize: 15.0,
+                          fontSize: 16.0,
                           fontFamily: "Comfortaa-Bold",
                           color: Color(0xFF262261)),
                     ),
@@ -172,7 +173,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text(
                       "Facebook",
                       style: TextStyle(
-                          fontSize: 15.0,
+                          fontSize: 16.0,
                           fontFamily: "Comfortaa-Bold",
                           color: Color(0xFF262261)),
                     ),
@@ -203,6 +204,42 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 TextSpan(
                   text: " Sign Up",
+                  style: TextStyle(
+                      color: Color(0xFFF05A28),
+                      fontSize: 14.0,
+                      fontFamily: "Comfortaa-Medium"),
+                )
+              ],
+            ),
+          ),
+        ),
+        /* child: Text(Localization.of(context).signIn,
+              style: TextStyle(
+                  color: Color(0xFF262261),
+                  fontSize: 14.0,
+                  fontFamily: "Comfortaa-Medium")),
+        ),*/
+      );
+
+  Widget _getSignUpAsInstructor() => Container(
+        margin: const EdgeInsets.all(10),
+        child: FlatButton(
+          padding: const EdgeInsets.all(10),
+          onPressed: _registerPressed,
+          child: RichText(
+            text: TextSpan(
+              // Note: Styles for TextSpans must be explicitly defined.
+              // Child text spans will inherit styles from parent
+              children: <TextSpan>[
+                TextSpan(
+                  text: "Want to become an instructor?",
+                  style: TextStyle(
+                      color: Color(0xFF262261),
+                      fontSize: 14.0,
+                      fontFamily: "Comfortaa-Medium"),
+                ),
+                TextSpan(
+                  text: "\n        Sign up as Instructor",
                   style: TextStyle(
                       color: Color(0xFFF05A28),
                       fontSize: 14.0,
@@ -258,7 +295,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           child: Text(
             Localization.of(context).loginTitle,
-            style: TextStyle(fontSize: 15.0, fontFamily: "Comfortaa-Bold"),
+            style: TextStyle(fontSize: 16.0, fontFamily: "Comfortaa-Bold"),
           ),
         ),
       );
@@ -268,7 +305,7 @@ class _LoginScreenState extends State<LoginScreen> {
             const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 10),
         child: TextFormField(
           style: TextStyle(
-              fontSize: 15.0,
+              fontSize: 20.0,
               color: Color(0xFF262261),
               fontFamily: "Comfortaa-Medium"),
           textInputAction: TextInputAction.done,

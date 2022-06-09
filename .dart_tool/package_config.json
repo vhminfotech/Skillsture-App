@@ -74,6 +74,12 @@
       "languageVersion": "2.1"
     },
     {
+      "name": "country_code_picker",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/country_code_picker-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "crypto",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.2",
       "packageUri": "lib/",
@@ -129,7 +135,7 @@
     },
     {
       "name": "flutter_launcher_icons",
-      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/flutter_launcher_icons-0.9.2",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/flutter_launcher_icons-0.9.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -212,6 +218,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "modal_bottom_sheet",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/modal_bottom_sheet-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "nested",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/nested-1.0.0",
       "packageUri": "lib/",
@@ -225,7 +237,7 @@
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.10",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.11",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -422,6 +434,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "universal_platform",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/universal_platform-1.0.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.2",
       "packageUri": "lib/",
@@ -458,7 +476,7 @@
       "languageVersion": "2.6"
     }
   ],
-  "generated": "2022-05-31T10:18:12.304651Z",
+  "generated": "2022-06-07T11:19:16.122339Z",
   "generator": "pub",
   "generatorVersion": "2.17.1"
 }
