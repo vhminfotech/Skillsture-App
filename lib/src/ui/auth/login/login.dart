@@ -32,9 +32,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) => SafeArea(
         child: Scaffold(
-          /*appBar: AppBar(
-            title: Text(apiBaseUrl),
-          ),*/
           body: Form(
             key: _key,
             autovalidateMode: AutovalidateMode.always,
@@ -50,7 +47,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   _getSocialButton(),
                   _getAccountRegister(),
                   _getSignUpAsInstructor(),
-//                  _buildBody(context),
                 ],
               ),
             ),
@@ -213,12 +209,6 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
         ),
-        /* child: Text(Localization.of(context).signIn,
-              style: TextStyle(
-                  color: Color(0xFF262261),
-                  fontSize: 14.0,
-                  fontFamily: "Comfortaa-Medium")),
-        ),*/
       );
 
   Widget _getSignUpAsInstructor() => Container(
@@ -249,12 +239,6 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
         ),
-        /* child: Text(Localization.of(context).signIn,
-              style: TextStyle(
-                  color: Color(0xFF262261),
-                  fontSize: 14.0,
-                  fontFamily: "Comfortaa-Medium")),
-        ),*/
       );
 
   Widget _txtSignedInOption() => Row(children: <Widget>[
@@ -327,7 +311,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 });
               },
             ),
-            // border: const OutlineInputBorder(),
           ),
           onSaved: (_) {
             _password = _;

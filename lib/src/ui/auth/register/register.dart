@@ -91,18 +91,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
         )
       ]);
 
-  Widget _getAppLogo() {
-    return Center(
-      child: Container(
-        padding: EdgeInsets.all(10),
-        margin: EdgeInsets.all(20),
-        child: FlutterLogo(
-          size: 200,
-        ),
-      ),
-    );
-  }
-
   Widget _getEmailTextField() {
     return Container(
       padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
@@ -429,31 +417,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           ),
         ),
       ],
-    ); /*Container(
-      padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
-      margin: const EdgeInsets.only(top: 12),
-      child: TextFormField(
-        style: TextStyle(
-            fontSize: 20.0,
-            color: Color(0xFF262261),
-            fontFamily: "Comfortaa-Medium"),
-        textInputAction: TextInputAction.next,
-        focusNode: _mobileFocus,
-        decoration: Utils.styleInputDecoration(Localization.of(context).mobile),
-        maxLength: 10,
-        validator: (value) {
-          return Utils.isEmpty(
-            context,
-            value,
-            Localization.of(context).msgEnterMobile,
-          );
-        },
-        onSaved: (value) {
-          _mobile = value;
-        },
-        keyboardType: TextInputType.phone,
-      ),
-    );*/
+    );
   }
 
   Widget _getNameTextField() {
@@ -738,12 +702,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
           ),
         ),
-        /* child: Text(Localization.of(context).signIn,
-              style: TextStyle(
-                  color: Color(0xFF262261),
-                  fontSize: 14.0,
-                  fontFamily: "Comfortaa-Medium")),
-        ),*/
       );
 
   Widget _txtSignedInOption() => Row(children: <Widget>[

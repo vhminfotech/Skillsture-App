@@ -9,11 +9,7 @@ class CheckYourMailScreen extends StatefulWidget {
 }
 
 class _CheckYourMailState extends State<CheckYourMailScreen> {
-  final FocusNode _emailFocus = FocusNode();
-
   final GlobalKey<FormState> _key = GlobalKey();
-
-  String _email;
 
   @override
   Widget build(BuildContext context) {
@@ -111,10 +107,6 @@ class _CheckYourMailState extends State<CheckYourMailScreen> {
           ],
         ),
       );
-
-  void _loginPressed() {
-    NavigationUtils.push(context, routeLogin);
-  }
 
   void _checkYourMailPressed() {
     NavigationUtils.push(context, routeResetPassword);
