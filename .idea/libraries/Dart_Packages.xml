@@ -271,6 +271,13 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter_goldens">
           <value>
             <list>
@@ -296,6 +303,13 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter_test/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_web_plugins">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter_web_plugins/lib" />
             </list>
           </value>
         </entry>
@@ -1069,8 +1083,10 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/yaml-3.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/yaml-3.1.1/lib" />
       <root url="file://$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/bin/cache/pkg/sky_engine/lib" />
+      <root url="file://$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter/lib" />
       <root url="file://$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter_goldens/lib" />
       <root url="file://$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter_test/lib" />
+      <root url="file://$PROJECT_DIR$/../flutter_app_base_project_setup-master/flutter/packages/flutter_web_plugins/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
