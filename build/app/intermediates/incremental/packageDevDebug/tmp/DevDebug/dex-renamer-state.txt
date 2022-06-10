@@ -1,4 +1,4 @@
-#Wed Jun 08 15:10:29 IST 2022
-base.0=/Users/mac/Documents/flutter-base/Skillsture-App/build/app/intermediates/dex/DevDebug/mergeDexDevDebug/classes.dex
+#Fri Jun 10 19:07:58 IST 2022
+base.0=C\:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\build\\app\\intermediates\\dex\\DevDebug\\mergeDexDevDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
