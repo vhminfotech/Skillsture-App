@@ -1,6 +1,7 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 
 import '../../../graphqlconfigs/mutation_query.dart';
 import '../../../localization/localization.dart';
@@ -83,6 +84,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       return _getSignUpButton(runMutation);
                     },
                   ),
+                  //_getSignUpButton(),
                   _txtSignedInOption(),
                   _getSocialButton(),
                   _getLogin()
@@ -103,35 +105,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
         ),
         _rowPasswordField(
             "contains at least 8 characters", _isPasswordEightDigit),
-        SizedBox(
-          height: 2,
-        ),
         _rowPasswordField("contains both lowercase and uppercase letters",
             _isPasswordUpperAndLower),
-        SizedBox(
-          height: 2,
-        ),
         _rowPasswordField("contains at least one number (0-9) or a symbol",
             _isPasswordOneNumberSymbol),
-        SizedBox(
-          height: 2,
-        ),
-        Row(
-          children: [
-            Container(
-              padding: EdgeInsets.only(left: 20.0, right: 10),
-              child: Icon(
-                Icons.check,
-                color: _isPasswordNotEmail ? Colors.green : Colors.red,
-                size: 20,
-              ),
-            ),
-            Text(
-              "does not contain your email address",
-              style: Utils.styleTextStylePasswordTextField(),
-            )
-          ],
-        ),
+        _rowPasswordField(
+            "does not contain your email address", _isPasswordNotEmail),
       ],
     );
   }
@@ -139,13 +118,30 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget _rowPasswordField(String label, bool passwordValidation) {
     return Row(
       children: [
-        Container(
-          padding: EdgeInsets.only(left: 20.0, right: 10),
-          child: Icon(
-            Icons.check,
-            color: passwordValidation ? Colors.green : Colors.red,
-            size: 20,
-          ),
+        SizedBox(
+          width: 20,
+        ),
+        passwordValidation
+            ? Container(
+                height: 20,
+                width: 20,
+                child: Icon(
+                  Icons.check,
+                  color: Colors.green,
+                  size: 20,
+                ),
+              )
+            : Container(
+                height: 20,
+                width: 20,
+                child: Icon(
+                  Icons.circle,
+                  color: Colors.black,
+                  size: 7,
+                ),
+              ),
+        SizedBox(
+          width: 5,
         ),
         Text(
           label,
@@ -203,6 +199,33 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   Widget _getMobileTextField() {
+    return Container(
+      padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+      margin: const EdgeInsets.only(top: 12),
+      child: IntlPhoneField(
+        decoration:
+          Utils.styleInputDecoration(Localization.of(context).mobile),
+        initialCountryCode: 'MY',
+        validator: (phone) {
+          return Utils.isEmpty(
+            context,
+            phone.completeNumber,
+            Localization.of(context).msgEnterMobile,
+          );
+        },
+        onChanged: (phone) {
+          print(phone.completeNumber);
+          _mobile = phone.completeNumber;
+        },
+        onSaved: (phone) {
+          _mobile = phone.completeNumber;
+        },
+      ),
+    );
+  }
+
+
+ /* Widget _getMobileTextField() {
     return Row(
       children: <Widget>[
         Expanded(
@@ -256,7 +279,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         ),
       ],
     );
-  }
+  }*/
 
   Widget _getNameTextField() {
     return Container(
@@ -299,19 +322,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
         //onPressed: _registerPressed,
         onPressed: (){
           if (_key.currentState.validate()) {
-            _key.currentState.save();
 
-            print(_name);
-            print(_email);
-            print(_mobile);
-            print(_password);
+            if(agree == true){
+              _key.currentState.save();
 
-            runMutation({
-                "fullName": _name,
-                "email": _email,
-                "mobile": _mobile,
-                "password": _password
-            });
+              print(_name);
+              print(_email);
+              print(_password);
+              print(_mobile);
+              print(_confirmPassword);
+            }else{
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                content: Text("Please accept terms & conditions"),
+              ));
+              print("Please accept terms & conditions");
+            }
           }
         },
         shape: RoundedRectangleBorder(
@@ -324,6 +349,27 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
     );
   }
+
+/*  Widget _getSignUpButton() {
+    return Container(
+      width: double.infinity,
+      height: 50,
+      margin: const EdgeInsets.all(20),
+      child: RaisedButton(
+        color: Color(0xFFF05A28),
+        textColor: Colors.white,
+        elevation: 1.0,
+        onPressed: _registerPressed,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(7.5),
+        ),
+        child: Text(
+          "Sign Up",
+          style: TextStyle(fontSize: 16.0, fontFamily: "Comfortaa-Bold"),
+        ),
+      ),
+    );
+  }*/
 
   Widget _getPasswordTextField() {
     return Container(
@@ -353,6 +399,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             borderSide: BorderSide(color: Color(0xFFFFB451), width: 2),
           ),
         ),
+        validator: onValidationPassword,
         onSaved: (value) {
           _password = value;
         },
@@ -395,6 +442,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
         ),
         onSaved: (value) {
           _confirmPassword = value;
+        },
+        validator: (value){
+          return Utils.isPasswordMatched(context, value, _password);
         },
         obscureText: _confirmPasswordVisible,
       ),
@@ -590,13 +640,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   void _registerPressed() {
     if (_key.currentState.validate()) {
-      _key.currentState.save();
 
-      print(_name);
-      print(_email);
-      print(_password);
-      print(_mobile);
-      print(_confirmPassword);
+      if(agree == true){
+        _key.currentState.save();
+
+        print(_name);
+        print(_email);
+        print(_password);
+        print(_mobile);
+        print(_confirmPassword);
+      }else{
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text("Please accept terms & conditions"),
+        ));
+        print("Please accept terms & conditions");
+      }
     }
   }
 
@@ -630,11 +688,47 @@ class _RegisterScreenState extends State<RegisterScreen> {
       }
     });
   }
+
+  String onValidationPassword(String password) {
+
+    if (password.isEmpty){
+      return "Please enter a password";
+    }
+/*
+    final upperLowerReg = RegExp(r'[A-Za-z]');
+    final numberOrSymbol = RegExp(r'[!@#$%^&*_0-9]');
+
+    _isPasswordEightDigit = false;
+    _isPasswordOneNumberSymbol = false;
+    _isPasswordUpperAndLower = false;
+    _isPasswordNotEmail = false;
+
+    if (password.length >= 8) {
+      setState(() {
+        _isPasswordEightDigit = true;
+      });
+    }
+    if (numberOrSymbol.hasMatch(password)) {
+      setState(() {
+        _isPasswordOneNumberSymbol = true;
+      });
+    }
+    if (upperLowerReg.hasMatch(password)) {
+      setState(() {
+        _isPasswordUpperAndLower = true;
+      });
+    }
+    if (password != _email) {
+      setState(() {
+        _isPasswordNotEmail = true;
+      });
+    }*/ else {
+      return null;
+    }
+  }
 }
 
-void _getRegistrationMutation() {
-}
-
+void _getRegistrationMutation() {}
 
 final List<String> countryList = [
   'AF',

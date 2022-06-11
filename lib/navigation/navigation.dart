@@ -12,6 +12,8 @@ class NavigationUtils {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     // final args = settings.arguments;
     switch (settings.name) {
+/*      case '/':
+        return MaterialPageRoute(builder: (_) => SplashScreen());*/
       case routeRegister:
         return MaterialPageRoute(builder: (_) => RegisterScreen());
       case routeLogin:

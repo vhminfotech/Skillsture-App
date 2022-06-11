@@ -2,11 +2,16 @@ import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:libphonenumber/libphonenumber.dart';
+import '../auth/model/password_model.dart';
 import '../localization/localization.dart';
 import 'constants.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class Utils {
+
+  final PasswordModel passwordModel = PasswordModel();
+
+
   static bool isEmailValid(String value) {
     const pattern =
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
@@ -76,15 +81,34 @@ class Utils {
     return null;
   }
 
-  static onChangePassword(String pass){
+  void onChangePasswordValidation(String password, String email) {
 
+
+    final upperLowerReg = RegExp(r'[A-Za-z]');
+    final numberOrSymbol = RegExp(r'[!@#$%^&*_0-9]');
+
+      if (password.length >= 8) {
+        passwordModel.isPasswordEightDigit = true;
+      }
+
+      if (numberOrSymbol.hasMatch(password)) {
+        passwordModel.isPasswordOneNumberSymbol = true;
+      }
+
+      if (upperLowerReg.hasMatch(password)) {
+        passwordModel.isPasswordUpperAndLower = true;
+      }
+
+      if (password != email) {
+        passwordModel.isPasswordNotEmail = true;
+      }
   }
 
   static bool isPasswordValidate(String value) {
     const pattern =
         r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$';
     final regex = RegExp(pattern);
-    if (value.length == 0 || value.isEmpty) {
+    if (value.isEmpty || value.isEmpty) {
       return false;
     } else if (!regex.hasMatch(value)) {
       return true;
@@ -103,6 +127,15 @@ class Utils {
     }
   }
 
+
+  String onValidationPassword(String password) {
+    if (password.isEmpty){
+      return "Please enter a password";
+    } else {
+      return null;
+    }
+  }
+
   static String isValidConfirmPassword(BuildContext context, String value) {
     if (value.isEmpty) {
       return Localization.of(context).errorConfirmPassword;
@@ -116,8 +149,9 @@ class Utils {
   // Is Password and ConfirmPassword are SAME or DIFFERENT
   static String isPasswordMatched(
       BuildContext context, String password, String confirmPassword) {
-    if (password.isEmpty || confirmPassword.isEmpty) {
-      return Localization.of(context).errorConfirmPassword;
+    if (password.isEmpty) {
+      return "Please enter a confirm password";
+      //return Localization.of(context).errorConfirmPassword;
     } else if (password != confirmPassword) {
       return Localization.of(context).errorDiffPassword;
     } else {

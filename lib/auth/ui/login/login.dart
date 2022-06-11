@@ -347,6 +347,13 @@ class _LoginScreenState extends State<LoginScreen> {
           onSaved: (_) {
             _password = _;
           },
+          validator: (value){
+            if(value.isEmpty){
+              return "Please enter a password";
+            }else {
+              return null;
+            }
+          },
           obscureText: _passwordVisible,
           onFieldSubmitted: (_) {
             _passwordFocus.unfocus();

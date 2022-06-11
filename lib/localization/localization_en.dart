@@ -60,10 +60,10 @@ class LocalizationEN implements Localization {
   String get ok => "Ok";
 
   @override
-  String get errorConfirmPassword => "errorConfirmPassword";
+  String get errorConfirmPassword => "Confirm password not matched";
 
   @override
-  String get errorDiffPassword => "errorDiffPassword";
+  String get errorDiffPassword => "Confirm password not matched";
 
   @override
   String get errorPassword => "errorPassword";

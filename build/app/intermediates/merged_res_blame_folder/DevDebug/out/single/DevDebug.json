@@ -24,6 +24,14 @@
         "source": "C:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\launcher_icon.png"
     },
     {
+        "merged": "C:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\build\\app\\intermediates\\merged_res\\DevDebug\\mipmap-mdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\android\\app\\src\\main\\res\\mipmap-mdpi\\launcher_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\build\\app\\intermediates\\merged_res\\DevDebug\\drawable_splash_logo.png.flat",
+        "source": "C:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\android\\app\\src\\main\\res\\drawable\\splash_logo.png"
+    },
+    {
         "merged": "C:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\build\\app\\intermediates\\merged_res\\DevDebug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
@@ -38,9 +46,5 @@
     {
         "merged": "C:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\build\\app\\intermediates\\merged_res\\DevDebug\\mipmap-hdpi_launcher_icon.png.flat",
         "source": "C:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\android\\app\\src\\main\\res\\mipmap-hdpi\\launcher_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\build\\app\\intermediates\\merged_res\\DevDebug\\mipmap-mdpi_launcher_icon.png.flat",
-        "source": "C:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\android\\app\\src\\main\\res\\mipmap-mdpi\\launcher_icon.png"
     }
 ]

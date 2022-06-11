@@ -33,32 +33,39 @@
 28            android:launchMode="singleTop"
 29            android:theme="@style/LaunchTheme"
 30            android:windowSoftInputMode="adjustResize" >
-31            <intent-filter>
-32                <action android:name="android.intent.action.MAIN" />
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-35            </intent-filter>
-36        </activity>
-37        <!--
-38             Don't delete the meta-data below.
-39             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-40        -->
-41        <meta-data
-42            android:name="flutterEmbedding"
-43            android:value="2" />
-44
-45        <uses-library
-45-->[androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\d8c764f4c91c94fe8ae90da45222cf00\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-46            android:name="androidx.window.extensions"
-46-->[androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\d8c764f4c91c94fe8ae90da45222cf00\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-47            android:required="false" />
-47-->[androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\d8c764f4c91c94fe8ae90da45222cf00\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-48        <uses-library
-48-->[androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\d8c764f4c91c94fe8ae90da45222cf00\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-49            android:name="androidx.window.sidecar"
-49-->[androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\d8c764f4c91c94fe8ae90da45222cf00\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-50            android:required="false" />
-50-->[androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\d8c764f4c91c94fe8ae90da45222cf00\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-51    </application>
-52
-53</manifest>
+31            <meta-data
+32                android:name="io.flutter.embedding.android.NormalTheme"
+33                android:resource="@style/NormalTheme" />
+34            <meta-data
+35                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+36                android:resource="@color/bg_splash" />
+37
+38            <intent-filter>
+39                <action android:name="android.intent.action.MAIN" />
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+42            </intent-filter>
+43        </activity>
+44        <!--
+45             Don't delete the meta-data below.
+46             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+47        -->
+48        <meta-data
+49            android:name="flutterEmbedding"
+50            android:value="2" />
+51
+52        <uses-library
+52-->[androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\d8c764f4c91c94fe8ae90da45222cf00\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+53            android:name="androidx.window.extensions"
+53-->[androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\d8c764f4c91c94fe8ae90da45222cf00\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+54            android:required="false" />
+54-->[androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\d8c764f4c91c94fe8ae90da45222cf00\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+55        <uses-library
+55-->[androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\d8c764f4c91c94fe8ae90da45222cf00\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+56            android:name="androidx.window.sidecar"
+56-->[androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\d8c764f4c91c94fe8ae90da45222cf00\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+57            android:required="false" />
+57-->[androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\d8c764f4c91c94fe8ae90da45222cf00\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+58    </application>
+59
+60</manifest>
