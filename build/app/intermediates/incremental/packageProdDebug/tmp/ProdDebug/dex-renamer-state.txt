@@ -1,0 +1,4 @@
+#Sat Jun 11 18:53:58 IST 2022
+base.0=C\:\\Users\\DELL\\Documents\\GitHub\\Skillsture-App\\build\\app\\intermediates\\dex\\ProdDebug\\mergeDexProdDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
